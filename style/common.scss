@@ -1,0 +1,175 @@
+/**
+ * 公共样式
+ * 补充一些colorUI没有但是设计图常用的样式
+ * 一些兼容性样式等
+ */
+
+page {
+    background: #F8F8F8;
+    min-height: 100%;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.text-333 {
+    color: #333333;
+}
+
+.text-666 {
+    color: #666666;
+}
+
+.text-999 {
+    color: #999999;
+}
+
+.text-bf {
+    color: #BFBFBF;
+}
+
+.text-through {
+    text-decoration: line-through;
+}
+
+.text-weight-400 {
+    font-weight: 400;
+}
+
+.text-weight-500 {
+    font-weight: 500;
+}
+
+.text-weight-600 {
+    font-weight: 600;
+}
+
+.text-weight-700 {
+    font-weight: 700;
+}
+
+.text-cut-2,
+.text-cut-3,
+.text-cut-4,
+.text-cut-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.text-cut-2 {
+    -webkit-line-clamp: 2;
+}
+
+.text-cut-3 {
+    -webkit-line-clamp: 3;
+}
+
+.text-cut-4 {
+    -webkit-line-clamp: 4;
+}
+
+.text-cut-5 {
+    -webkit-line-clamp: 5;
+}
+
+.height-88 {
+    height: 88upx;
+}
+
+.height-100 {
+    height: 100upx;
+}
+
+.safeArea-bottom {
+    padding-bottom: 0;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bg-theme {
+    background: $bgtheme;
+}
+
+.text-theme,
+.line-theme,
+.lines-theme {
+    color: $theme!important;
+}
+
+.line-theme::after,
+.lines-theme::after {
+    border-color: $theme!important;
+}
+
+.overHidden {
+    overflow: hidden;
+}
+
+.word-break-all {
+    word-break: break-all;
+}
+
+.placeholderClass {
+    font-size: 32upx;
+    color: #BFBFBF;
+}
+
+.checkboxScale {
+    transform: scale(0.65);
+}
+
+switch.theme[checked] .wx-switch-input,
+checkbox.theme[checked] .wx-checkbox-input,
+radio.theme[checked] .wx-radio-input,
+switch.theme.checked .uni-switch-input,
+checkbox.theme.checked .uni-checkbox-input,
+radio.theme.checked .uni-radio-input {
+    background: $theme!important;
+    border-color: $theme!important;
+    color: #ffffff!important;
+}
+
+uni-switch.green[checked] .wx-switch-input,
+uni-checkbox.green[checked] .wx-checkbox-input,
+uni-checkbox[checked] .wx-checkbox-input,
+uni-radio.green[checked] .wx-radio-input,
+uni-switch.green.checked .uni-switch-input,
+uni-switch.checked .uni-switch-input,
+uni-checkbox.green.checked .uni-checkbox-input,
+uni-checkbox.checked .uni-checkbox-input,
+uni-radio.green.checked .uni-radio-input,
+uni-radio.checked .uni-radio-input {
+    background-color: $theme !important;
+    color: #ffffff !important;
+    border-color: $theme !important;
+}
+
+uni-checkbox:not([disabled]) .uni-checkbox-input:hover {
+    border-color: $theme !important;
+}
+
+// w-picker 加圆角
+.w-picker .w-picker-cnt.visible {
+    border-radius: 16upx 16upx 0px 0px !important;
+    overflow: hidden!important;
+}
+
+// w-picker 标题栏高度
+.w-picker .w-picker-header {
+    height: 100upx!important;
+}
+
+// w-picker 去掉山下边框线
+.uni-picker-view-indicator::before {
+    border-top: 1px solid transparent;
+}
+
+.uni-picker-view-indicator:after {
+    border-bottom: 1px solid transparent;
+}
+uni-modal .uni-modal__bd{
+    color: #333!important;
+  }

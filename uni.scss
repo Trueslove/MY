@@ -1,0 +1,361 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+
+// @import './style/common.scss';
+
+/*=======================================
+=            fast-ui 全局变量           =
+=======================================*/
+
+$theme: #FA2033;
+$bgtheme: linear-gradient(126deg, #FA2033 0%, #FF6530 100%);
+$mo-prefix: fu;
+// 文字颜色
+$mo-main-color: $theme;
+$mo-tips-color: #909399;
+$mo-content-color: #606266;
+$mo-light-color: #c0c4cc;
+$mo-btn-bg: linear-gradient(87deg, #2da4f9 0%, #0e6dff 100%); // 全局按钮背景色
+$mo-active-bgcolor: #f7f7f7; // 全局active背景色
+$mo-active-opacity: .7; // 全局active透明度
+$mo-border-color: #e4e7ed; // 边框色
+$mo-bg-color: #0e6dff; // 背景色                                                  // 背景色
+$mo-type-primary: #0e6dff;
+$mo-type-primary-light: #ecf5ff;
+$mo-type-primary-disabled: #a0cfff;
+$mo-type-primary-dark: #0e6dff;
+$mo-type-warning: #ff9900;
+$mo-type-warning-disabled: #fcbd71;
+$mo-type-warning-dark: #f29100;
+$mo-type-warning-light: #fdf6ec;
+$mo-type-success: #19be6b;
+$mo-type-success-disabled: #71d5a1;
+$mo-type-success-dark: #18b566;
+$mo-type-success-light: #dbf1e1;
+$mo-type-error: $theme;
+$mo-type-error-disabled: #fab6b6;
+$mo-type-error-dark: #dd6161;
+$mo-type-error-light: #fef0f0;
+$mo-type-info: #909399;
+$mo-type-info-disabled: #c8c9cc;
+$mo-type-info-dark: #82848a;
+$mo-type-info-light: #f4f4f5;
+
+/*=====  End of fast-ui 全局变量   ======*/
+
+
+/* 行为相关颜色 */
+
+$uni-color-primary: #FE922B;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: $theme;
+
+/* 文字基本颜色 */
+
+$uni-text-color:#333; //基本色
+$uni-text-color-inverse:#fff; //反色
+$uni-text-color-grey:#999; //辅助灰色，如加载更多的提示信息
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable:#c0c0c0;
+
+/* 背景颜色 */
+
+$uni-bg-color:#ffffff;
+$uni-bg-color-grey:#f8f8f8;
+$uni-bg-color-hover:#f1f1f1; //点击状态颜色
+$uni-bg-color-mask:rgba(0, 0, 0, 0.4); //遮罩颜色
+
+/* 边框颜色 */
+
+$uni-border-color:#c8c7cc;
+
+/* 尺寸变量 */
+
+
+/* 文字尺寸 */
+
+$uni-font-size-sm:24upx;
+$uni-font-size-base:28upx;
+$uni-font-size-lg:32upx;
+
+/* 图片尺寸 */
+
+$uni-img-size-sm:40upx;
+$uni-img-size-base:52upx;
+$uni-img-size-lg:80upx;
+
+/* Border Radius */
+
+$uni-border-radius-sm: 4upx;
+$uni-border-radius-base: 6upx;
+$uni-border-radius-lg: 12upx;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+
+$uni-spacing-row-sm: 10px;
+$uni-spacing-row-base: 20upx;
+$uni-spacing-row-lg: 30upx;
+
+/* 垂直间距 */
+
+$uni-spacing-col-sm: 8upx;
+$uni-spacing-col-base: 16upx;
+$uni-spacing-col-lg: 24upx;
+
+/* 透明度 */
+
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+
+$uni-color-title: #2C405A; // 文章标题颜色
+$uni-font-size-title:40upx;
+$uni-color-subtitle: #555555; // 二级标题颜色
+$uni-font-size-subtitle:36upx;
+$uni-color-paragraph: #3F536E; // 文章段落颜色
+$uni-font-size-paragraph:30upx;
+
+/* #ifndef APP-PLUS-NVUE */
+
+@mixin top-line($color, $line: solid, $index: 0) {
+    content: '';
+    position: absolute;
+    z-index: $index;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px $line $color;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+@mixin bottom-line($color, $line: solid, $index: 0) {
+    content: '';
+    position: absolute;
+    z-index: $index;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px $line $color;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+@mixin left-line($color, $line: solid, $index: 0) {
+    content: '';
+    position: absolute;
+    z-index: $index;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: 1px $line $color;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+@mixin right-line($color, $line: solid, $index: 0) {
+    content: '';
+    position: absolute;
+    z-index: $index;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-right: 1px $line $color;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+@mixin around-line($color, $line: solid, $index: 0, $radius: 0upx) {
+    content: ' ';
+    position: absolute;
+    pointer-events: none;
+    // 设置为border-box，意味着下面的scale缩小为0.5，实际上缩小的是伪元素的内容（border-box意味着内容不含border）
+    box-sizing: border-box;
+    // 中心点作为变形(scale())的原点
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    border: 1px $line $color;
+    border-radius: $radius * 2;
+    z-index: $index;
+}
+
+
+/*===========================================
+=            fast-ui public class           =
+===========================================*/
+
+.mo-mr20 {
+    margin-right: 20upx;
+}
+
+.mo-fs32 {
+    font-size: 32upx;
+}
+
+.mo-cred {
+    color: $theme;
+}
+
+.mo-cprimary {
+    color: $theme;
+}
+
+.mo-bgcred {
+    background: $bgtheme;
+}
+
+.mo-bgcwhite {
+    background-color: #FFFFFF;
+}
+
+
+/* 颜色 */
+
+
+/* flex 布局 */
+
+.#{$mo-prefix}-flex {
+    display: flex;
+}
+
+.#{$mo-prefix}-rows {
+    display: flex;
+    flex-direction: row;
+}
+
+.#{$mo-prefix}-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.#{$mo-prefix}-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.#{$mo-prefix}-nowrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.#{$mo-prefix}-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.#{$mo-prefix}-flex-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.#{$mo-prefix}-flex-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.#{$mo-prefix}-flex-vtop {
+    align-items: flex-start;
+}
+
+.#{$mo-prefix}-flex-vcenter {
+    align-items: center;
+}
+
+.#{$mo-prefix}-flex-vbottom {
+    align-items: flex-end;
+}
+
+.#{$mo-prefix}-no-scale {
+    flex-shrink: 0;
+}
+
+.#{$mo-prefix}-flex1 {
+    flex: 1;
+}
+
+.#{$mo-prefix}-flex-v1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+/* 定位 */
+
+.#{$mo-prefix}-relative {
+    position: relative;
+}
+
+.#{$mo-prefix}-absolute-lt {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.#{$mo-prefix}-absolute-rt {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+}
+
+.#{$mo-prefix}-absolute-lb {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+}
+
+.#{$mo-prefix}-absolute-rb {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+}
+
+.#{$mo-prefix}-center-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*=====  End of fast-ui public class   ======*/
+
+
+/* #endif */

@@ -1,0 +1,19 @@
+{
+  "name": "modularization-example",
+  "version": "1.0.0",
+  "description": "项目",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "stars",
+  "license": "ISC",
+  "dependencies": {
+    "vue-i18n": "^8.22.2"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^2.0.20"
+  }
+}
