@@ -1,78 +1,45 @@
 {
     "pages": [{
-        "path": "pages/loading/index",
+        "path": "pages/home/index",
         "style": {
+            "navigationBarTitleText": "广场",
             "navigationStyle": "custom"
         }
     }, {
-        "path": "pages/timeDoor/index",
+        "path": "pages/diary/index",
         "style": {
-            "navigationBarTitleText": "时间门"
+            "navigationBarTitleText": "私密日记",
+            "navigationStyle": "custom"
         }
     }, {
-        "path": "pages/timeDoor/star-detail",
+        "path": "pages/add/index",
         "style": {
-            "navigationBarTitleText": "时间门"
+            "navigationBarTitleText": "发布",
+            "navigationStyle": "custom"
         }
     }, {
-        "path": "pages/timeDoor/officer-detail",
+        "path": "pages/info/index",
         "style": {
-            "navigationBarTitleText": "时间门"
+            "navigationBarTitleText": "消息",
+            "navigationStyle": "custom"
         }
     }, {
-        "path": "pages/timeDoor/time-split",
+        "path": "pages/my/index",
         "style": {
-            "navigationBarTitleText": "时间切片"
+            "navigationBarTitleText": "我的",
+            "navigationStyle": "custom"
         }
     }, {
-        "path": "pages/cloundHome/cloundDetail/index",
+        "path": "pages/info/detail",
         "style": {
-            "navigationBarTitleText": "姓氏地图"
+            "navigationBarTitleText": "信息详情",
+            "navigationStyle": "custom"
         }
     }, {
-        "path": "pages/cloundHome/clanHall/index",
+        "path": "pages/add/form",
         "style": {
-            "navigationBarTitleText": "云上祠堂"
-        }
-    }, {
-        "path": "pages/cloundHome/familyTree/index",
-        "style": {
-            "navigationBarTitleText": "云上家谱"
-        }
-    }, {
-        "path": "pages/home/index",
-        "style": {
-            "navigationBarTitleText": "首页"
-        }
-    }, {
-        "path": "pages/maiCircle/index",
-        "style": {
-            "navigationBarTitleText": "脉圈"
-        }
-    }, {
-        "path": "pages/cloundHome/index",
-        "style": {
-            "navigationBarTitleText": "云上家"
-        }
-    }, {
-        "path": "pages/mine/index",
-        "style": {
-            "navigationBarTitleText": "我的"
-        }
-    }, {
-        "path": "pages/mine/footprint/index",
-        "style": {
-            "navigationBarTitleText": "我的印记"
-        }
-    }, {
-        "path": "pages/notice/index",
-        "style": {
-            "navigationBarTitleText": "开发中..."
-        }
-    }, {
-        "path": "pages/detail/index",
-        "style": {
-            "navigationBarTitleText": "详情"
+            "navigationBarTitleText": "添加",
+            "navigationStyle": "custom"
         }
     }],
     "subPackages": [],
@@ -88,35 +55,42 @@
         }
     },
     "tabBar": {
-        "borderStyle": "black",
+        "borderStyle": "#ECECEC",
         "backgroundColor": "#FFFFFF",
         "color": "#333333",
-        "selectedColor": "#F02523",
-        "height": "0px",
+        "selectedColor": "#9D96FF",
+        "height": "50px",
+        "iconWidth": "21px",
+        "spacing": "4px",
+        "midButton": {
+            "pagePath": "pages/add/index",
+            "iconPath": "/static/tab/add.png",
+            "selectedIconPath": "/static/tab/addActive.png",
+            "text": "发布",
+            "iconWidth": "42px",
+            "height": "71px",
+            "width": "82px",
+            "selectedColor": "#9D96FF"
+        },
         "list": [{
             "pagePath": "pages/home/index",
             "iconPath": "/static/tab/home.png",
             "selectedIconPath": "/static/tab/homeActive.png",
-            "text": "首页"
+            "text": "广场"
         }, {
-            "pagePath": "pages/maiCircle/index",
-            "iconPath": "/static/tab/qun.png",
-            "selectedIconPath": "/static/tab/qunActive.png",
-            "text": "脉圈"
+            "pagePath": "pages/diary/index",
+            "iconPath": "/static/tab/diary.png",
+            "selectedIconPath": "/static/tab/diaryActive.png",
+            "text": "私密日记"
         }, {
-            "pagePath": "pages/timeDoor/index",
-            "iconPath": "/static/tab/time.png",
-            "selectedIconPath": "/static/tab/timeActive.png",
-            "text": "时间门"
+            "pagePath": "pages/info/index",
+            "iconPath": "/static/tab/info.png",
+            "selectedIconPath": "/static/tab/infoActive.png",
+            "text": "消息"
         }, {
-            "pagePath": "pages/cloundHome/index",
-            "iconPath": "/static/tab/zu.png",
-            "selectedIconPath": "/static/tab/zuActive.png",
-            "text": "云上家"
-        }, {
-            "pagePath": "pages/mine/index",
-            "iconPath": "/static/tab/user.png",
-            "selectedIconPath": "/static/tab/userActive.png",
+            "pagePath": "pages/my/index",
+            "iconPath": "/static/tab/my.png",
+            "selectedIconPath": "/static/tab/myActive.png",
             "text": "我的"
         }]
     }
