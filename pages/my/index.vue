@@ -11,7 +11,7 @@
         />
       </view>
       <view class="my-header-c">
-        <view class="my-h-c-tit">点击登录MY+</view>
+        <view class="my-h-c-tit" @click="handleLogin">点击登录MY+</view>
         <view class="my-h-c-edit">
           <img class="my-h-c-icon" src="../../static/my/autograph.png" alt="" />
           <view class="my-h-c-e-txt">快设置自己的个性签名哦～</view>
@@ -74,7 +74,11 @@
     <view class="my-cell-wap">
       <view class="my-cell">
         <view class="my-cell-l">
-          <img style="width:12px;height:15px" src="../../static/my/security.png" alt="" />
+          <img
+            style="width: 12px; height: 15px"
+            src="../../static/my/security.png"
+            alt=""
+          />
           <view class="my-cell-l-txt">账号安全</view>
         </view>
         <view class="my-cell-r">
@@ -83,7 +87,11 @@
       </view>
       <view class="my-cell">
         <view class="my-cell-l">
-          <img style="width:14px;height:14px" src="../../static/my/feedback.png" alt="" />
+          <img
+            style="width: 14px; height: 14px"
+            src="../../static/my/feedback.png"
+            alt=""
+          />
           <view class="my-cell-l-txt">意见反馈</view>
         </view>
         <view class="my-cell-r">
@@ -92,7 +100,11 @@
       </view>
       <view class="my-cell">
         <view class="my-cell-l">
-          <img style="width:15px;height:15px" src="../../static/my/about.png" alt="" />
+          <img
+            style="width: 15px; height: 15px"
+            src="../../static/my/about.png"
+            alt=""
+          />
           <view class="my-cell-l-txt">关于MY+</view>
         </view>
         <view class="my-cell-r">
@@ -101,7 +113,11 @@
       </view>
       <view class="my-cell">
         <view class="my-cell-l">
-          <img style="width:15px;height:15px" src="../../static/my/loginOut.png" alt="" />
+          <img
+            style="width: 15px; height: 15px"
+            src="../../static/my/loginOut.png"
+            alt=""
+          />
           <view class="my-cell-l-txt">退出登录</view>
         </view>
         <view class="my-cell-r">
@@ -113,7 +129,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handleLogin() {
+      uni.getUserInfo({
+        provider: "weixin",
+        success: (res) => {
+          console.log("getUserInfo", res);
+        },
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -131,7 +158,7 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1PX solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
     .my-cell-l {
       display: flex;
       align-items: center;

@@ -81,7 +81,27 @@
 </template>
 
 <script>
-export default {};
+export default {
+  onLoad(options) {
+    this.$http
+        .request({
+          url: "/couponOrder/queryOrder",
+          method: "get",
+          data: {
+            orderId: "79840010002",
+            storeNo: "HZ02",
+          },
+        })
+        .then((res) => {
+          let { data } = res;
+          this.listData = data;
+        })
+        .catch((err) => {
+          this.isShowLoading = false;
+          return;
+        });
+  }
+};
 </script>
 
 <style lang="scss" scoped>

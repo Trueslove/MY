@@ -45,6 +45,7 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "miniprogramRoot": "./dist/build/mp-weixin",
   "condition": {
     "search": {
       "list": []

@@ -1,6 +1,6 @@
 {
-    "name" : "唐山旅发大会",
-    "appid" : "__UNI__008CEF4",
+    "name" : "find",
+    "appid" : "wx2b16cd9031eb2987",
     "description" : "唐山旅发大会",
     "versionName" : "1.0.0",
     "versionCode" : 100,
@@ -76,7 +76,7 @@
                 "payment" : {
                     "weixin" : {
                         "__platform__" : [ "ios", "android" ],
-                        "appid" : "wx707824a7ac43011d",
+                        "appid" : "wx2b16cd9031eb2987",
                         "UniversalLinks" : ""
                     },
                     "alipay" : {
@@ -89,7 +89,7 @@
                 "share" : {},
                 "oauth" : {
                     "weixin" : {
-                        "appid" : "wx2493e8432811ef47",
+                        "appid" : "wx2b16cd9031eb2987",
                         "appsecret" : "818a0c977c057ef80e2767d1aa8df43a",
                         "UniversalLinks" : ""
                     },
@@ -170,10 +170,10 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxcd8db9ffa6eb036e",
+        "appid" : "wx2b16cd9031eb2987",
         "setting" : {
             "urlCheck" : true,
-            "minified" : true,
+            "minified" : false,
             "es6" : false,
             "postcss" : true
         },
