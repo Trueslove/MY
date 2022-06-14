@@ -1,13 +1,12 @@
 <template>
-  <view
-    class="tabbar"
-    :style="{ 'padding-bottom': paddingBottomHeight + 'upx' }"
-  >
+  <!-- :style="{ 'padding-bottom': paddingBottomHeight + 'upx' }" -->
+
+  <view class="tabbar">
     <view
       class="tabbar-item"
       v-for="(item, index) in list"
       :key="index"
-      @click="tabbarChange(item.pagePath)"
+      @click="tabbarChange(item)"
     >
       <image
         class="item-img"
@@ -44,57 +43,58 @@ export default {
           pagePath: "/pages/home/index",
           iconPath: "/static/tab/home.png",
           selectedIconPath: "/static/tab/homeActive.png",
-          text: "首页",
-        },
-        {
-          pagePath: "/pages/maiCircle/index",
-          iconPath: "/static/tab/qun.png",
-          selectedIconPath: "/static/tab/qunActive.png",
           text: "广场",
         },
         {
-          pagePath: "/pages/timeDoor/index",
-          iconPath: "/static/tab/time.png",
-          selectedIconPath: "/static/tab/timeActive.png",
-          text: "发布",
+          pagePath: "/pages/diary/index",
+          iconPath: "/static/tab/diary.png",
+          selectedIconPath: "/static/tab/diaryActive.png",
+          text: "私密日记",
         },
         {
-          pagePath: "/pages/cloundHome/index",
-          iconPath: "/static/tab/zu.png",
-          selectedIconPath: "/static/tab/zuActive.png",
+          pagePath: "/pages/add/index",
+          iconPath: "/static/tab/add.png",
+          selectedIconPath: "/static/tab/add.png",
+          text: "广场",
+        },
+        {
+          pagePath: "/pages/info/index",
+          iconPath: "/static/tab/info.png",
+          selectedIconPath: "/static/tab/infoActive.png",
           text: "消息",
         },
         {
-          pagePath: "/pages/mine/index",
-          iconPath: "/static/tab/user.png",
-          selectedIconPath: "/static/tab/userActive.png",
+          pagePath: "/pages/my/index",
+          iconPath: "/static/tab/my.png",
+          selectedIconPath: "/static/tab/myActive.png",
           text: "我的",
         },
       ],
     };
   },
   created() {
-    let that = this;
-    uni.getSystemInfo({
-      success: function (res) {
-        let model = ["X", "XR", "XS", "11", "12", "13", "14", "15"];
-        model.forEach((item) => {
-          //适配iphoneX以上的底部，给tabbar一定高度的padding-bottom
-          if (
-            res.model.indexOf(item) != -1 &&
-            res.model.indexOf("iPhone") != -1
-          ) {
-            that.paddingBottomHeight = 40;
-          }
-        });
-      },
-    });
+    // let that = this;
+    // uni.getSystemInfo({
+    //   success: function (res) {
+    //     let model = ["X", "XR", "XS", "11", "12", "13", "14", "15"];
+    //     model.forEach((item) => {
+    //       //适配iphoneX以上的底部，给tabbar一定高度的padding-bottom
+    //       if (
+    //         res.model.indexOf(item) != -1 &&
+    //         res.model.indexOf("iPhone") != -1
+    //       ) {
+    //         that.paddingBottomHeight = 40;
+    //       }
+    //     });
+    //   },
+    // });
   },
   watch: {},
   methods: {
-    tabbarChange(path) {
+    tabbarChange(row) {
+      uni.setNavigationBarTitle({ title: row.text });
       uni.switchTab({
-        url: path,
+        url: row.pagePath,
       });
     },
   },
@@ -117,7 +117,7 @@ uni-view {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 125upx;
+  height: calc(100 + safe-area-inset-bottom) upx;
   background-color: #ffffff;
   overflow: initial;
   z-index: 10000;
@@ -126,21 +126,23 @@ uni-view {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100upx;
+    height: calc(100 + safe-area-inset-bottom) upx;
     position: relative;
+    padding-bottom: constant(safe-area-inset-bottom); //兼容 IOS<11.2
+    padding-bottom: env(safe-area-inset-bottom); //兼容 IOS>11.2
     .item-img {
-      width: 40upx;
-      height: 40upx;
-      margin-bottom: 8upx;
+      width: 50upx;
+      height: 50upx;
+      margin-bottom: 6upx;
     }
     .item-img-2 {
-      width: 60upx;
-      height: 74upx;
+      width: 84upx;
+      height: 84upx;
       margin-top: -32upx;
     }
     .item-name {
-      font-size: 12upx;
-      color: #bbbec5;
+      font-size: 24upx;
+      color: #333;
     }
     .item-txt-2 {
       margin-top: 40upx;

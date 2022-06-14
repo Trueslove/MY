@@ -233,7 +233,7 @@ export default {
   }
 }
 .form {
-  background: url("../../static/diary/bgh.png") no-repeat;
+  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
   background-size: 269px 115px;
   overflow: hidden;
 }

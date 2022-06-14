@@ -62,35 +62,25 @@
         "height": "50px",
         "iconWidth": "21px",
         "spacing": "4px",
-        "midButton": {
-            "pagePath": "pages/add/index",
-            "iconPath": "/static/tab/add.png",
-            "selectedIconPath": "/static/tab/addActive.png",
-            "text": "发布",
-            "iconWidth": "42px",
-            "height": "71px",
-            "width": "82px",
-            "selectedColor": "#9D96FF"
-        },
         "list": [{
             "pagePath": "pages/home/index",
-            "iconPath": "/static/tab/home.png",
-            "selectedIconPath": "/static/tab/homeActive.png",
-            "text": "广场"
+            "text": "广场",
+            "customIcon": false
         }, {
             "pagePath": "pages/diary/index",
-            "iconPath": "/static/tab/diary.png",
-            "selectedIconPath": "/static/tab/diaryActive.png",
+            "customIcon": false,
             "text": "私密日记"
         }, {
+            "pagePath": "pages/add/index",
+            "customIcon": false,
+            "text": "广场"
+        }, {
             "pagePath": "pages/info/index",
-            "iconPath": "/static/tab/info.png",
-            "selectedIconPath": "/static/tab/infoActive.png",
+            "customIcon": false,
             "text": "消息"
         }, {
             "pagePath": "pages/my/index",
-            "iconPath": "/static/tab/my.png",
-            "selectedIconPath": "/static/tab/myActive.png",
+            "customIcon": false,
             "text": "我的"
         }]
     }

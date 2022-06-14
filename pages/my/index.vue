@@ -1,6 +1,7 @@
 
 <template>
   <view class="my">
+    <tabbar :current="4"></tabbar>
     <!-- 头像信息 -->
     <view class="my-header">
       <view class="my-header-l">
@@ -129,7 +130,14 @@
 </template>
 
 <script>
+import tabbar from "../../common/tab/index.vue"
 export default {
+  components: {
+    tabbar
+  },
+  onLoad(options) {
+    uni.hideTabBar();
+  },
   methods: {
     handleLogin() {
       uni.getUserInfo({
@@ -145,9 +153,10 @@ export default {
 
 <style lang="scss" scoped>
 .my {
-  background: url("../../static/diary/bgh.png") no-repeat;
+  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
   background-size: 269px 115px;
   overflow: hidden;
+  padding-top:var(--status-bar-height);
 }
 .my-cell-wap {
   background: #fff;
@@ -207,7 +216,7 @@ export default {
 }
 .my-info {
   padding: 0 15px;
-  background: url("../../static/my/bj.png") no-repeat;
+  background: url("https://s1.ax1x.com/2022/06/09/XyEGes.png") no-repeat;
   background-size: 360px 153px;
   background-position: 15px;
   margin-top: -30px;

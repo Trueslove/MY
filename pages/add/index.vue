@@ -1,6 +1,7 @@
 
 <template>
   <view class="add">
+    <tabbar :current="2"></tabbar>
     <view class="add-content">
       <view class="add-cell" @click="handleTopage">
         <view class="add-cell-tit">文字</view>
@@ -27,7 +28,14 @@
 </template>
 
 <script>
+import tabbar from "../../common/tab/index.vue"
 export default {
+  components: {
+    tabbar
+  },
+  onLoad(options) {
+    uni.hideTabBar()
+  },
   methods: {
     handleTopage() {
       uni.redirectTo({ url: '/pages/add/form' })
@@ -42,6 +50,7 @@ export default {
   justify-content: space-between;
   padding: 15px;
   flex-wrap: wrap;
+  padding-top:var(--status-bar-height);
   .add-cell {
     width: 164px;
     height: 190px;
@@ -78,7 +87,7 @@ export default {
   }
 }
 .add {
-  background: url("../../static/diary/bgh.png") no-repeat;
+  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
   background-size: 269px 115px;
   overflow: hidden;
 }

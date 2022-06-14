@@ -1,18 +1,19 @@
 
 <template>
   <view>
+    <tabbar :current="0"></tabbar>
     <!-- 头部 -->
     <view class="home-header">
       <view class="home-header-tit">
-        <view class="header-l"> </view>
+        <!-- <view class="header-l"> </view> -->
         <view class="header-c"> MY+ </view>
-        <view class="header-r">
+        <!-- <view class="header-r">
           <view class="header-r-i-wap">
             <span class="header-r-i-num">3</span>
             <img class="header-r-i" src="../../static/home/info.png" alt="" />
           </view>
           <img class="header-r-s" src="../../static/home/setting.png" alt="" />
-        </view>
+        </view> -->
       </view>
       <img class="home-h-logo" src="../../static/home/logo.png" alt="" />
       <view class="home-h-img">
@@ -81,25 +82,30 @@
 </template>
 
 <script>
+import tabbar from "../../common/tab/index.vue"
 export default {
+  components: {
+    tabbar
+  },
   onLoad(options) {
-    this.$http
-        .request({
-          url: "/couponOrder/queryOrder",
-          method: "get",
-          data: {
-            orderId: "79840010002",
-            storeNo: "HZ02",
-          },
-        })
-        .then((res) => {
-          let { data } = res;
-          this.listData = data;
-        })
-        .catch((err) => {
-          this.isShowLoading = false;
-          return;
-        });
+    uni.hideTabBar()
+    // this.$http
+    //     .request({
+    //       url: "/couponOrder/queryOrder",
+    //       method: "get",
+    //       data: {
+    //         orderId: "79840010002",
+    //         storeNo: "HZ02",
+    //       },
+    //     })
+    //     .then((res) => {
+    //       let { data } = res;
+    //       this.listData = data;
+    //     })
+    //     .catch((err) => {
+    //       this.isShowLoading = false;
+    //       return;
+    //     });
   }
 };
 </script>
@@ -112,6 +118,7 @@ export default {
     background: #fff;
     margin-bottom: 5px;
     .home-c-handle {
+        padding-top:var(--status-bar-height);
         display: flex;
         justify-content: space-around;
         margin-top: 8px;
@@ -200,12 +207,12 @@ export default {
   }
 }
 .home-header {
-  background: url("./../../static/home/bg.png") no-repeat;
+  background: url("https://s1.ax1x.com/2022/06/09/XyEaWT.png") no-repeat;
   background-size: 100% 115px;
   padding: 15px 18px 20px;
   .home-header-tit {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   .home-h-img {

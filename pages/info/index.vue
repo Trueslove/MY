@@ -1,6 +1,7 @@
 
 <template>
   <view class="info">
+    <tabbar :current="3"></tabbar>
     <!-- 查询 -->
     <view class="info-search">
       <view class="info-s-l">
@@ -71,7 +72,14 @@
 </template>
 
 <script>
+import tabbar from "../../common/tab/index.vue"
 export default {
+  components: {
+    tabbar
+  },
+  onLoad(options) {
+    uni.hideTabBar()
+  },
   methods: {
     handleToPage() {
       uni.navigateTo({
@@ -153,10 +161,11 @@ input::-webkit-input-placeholder {
   color: #999;
   font-size: 12px;
 }
-.info {
-  background: url("../../static/diary/bgh.png") no-repeat;
+.info { 
+  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
   background-size: 269px 115px;
   overflow: hidden;
+  padding-top:var(--status-bar-height);
 }
 .info-search {
   display: flex;

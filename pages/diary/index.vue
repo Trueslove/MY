@@ -1,6 +1,7 @@
 
 <template>
   <view class="diary">
+    <tabbar :current="1"></tabbar>
     <view class="diary-tit">私密日记</view>
     <view class="diary-content">
       <view class="diary-cell" v-for="item in 5" :key="item">
@@ -19,14 +20,23 @@
 </template>
 
 <script>
-export default {};
+import tabbar from "../../common/tab/index.vue"
+export default {
+  components: {
+    tabbar
+  },
+  onLoad(options) {
+    uni.hideTabBar()
+
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .diary {
-  background: url("../../static/diary/bgh.png") no-repeat;
+  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
   background-size: 269px 115px;
-  overflow: hidden;
+  padding-top:var(--status-bar-height);
 }
 .diary-content {
   padding: 0 15px;
