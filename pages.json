@@ -41,6 +41,12 @@
             "navigationBarTitleText": "添加",
             "navigationStyle": "custom"
         }
+    }, {
+        "path": "pages/my/myDetail",
+        "style": {
+            "navigationBarTitleText": "个人主页",
+            "navigationStyle": "custom"
+        }
     }],
     "subPackages": [],
     "globalStyle": {

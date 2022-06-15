@@ -9,6 +9,9 @@ import './common/filter/index.js';
 import './common/mixin/index.js';
 const router = new Router({ needLoginPages });
 
+import uView from 'uview-ui'
+Vue.use(uView)
+
 // #ifdef APP-PLUS
 import FuModal from '@/components/mo-modal/mo-modal.js';
 Vue.use(FuModal);
