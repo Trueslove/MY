@@ -1,6 +1,6 @@
 
 <template>
-  <view class="add">
+  <view class="add header-bj">
     <tabbar :current="2"></tabbar>
     <view class="add-content">
       <view class="add-cell" @click="handleTopage">
@@ -85,10 +85,5 @@ export default {
       margin-right: 12px;
     }
   }
-}
-.add {
-  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
-  background-size: 269px 115px;
-  overflow: hidden;
 }
 </style>

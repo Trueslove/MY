@@ -1,10 +1,10 @@
 
 <template>
-  <view class="my">
+  <view class="my content header-bj">
     <tabbar :current="4"></tabbar>
     <!-- 头像信息 -->
     <view class="my-header">
-      <view class="my-header-l">
+      <view class="my-header-l" @click="handleToPage('myDetail')">
         <img
           class="my-h-l-img"
           src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_360_360%2F49%2F30%2F5c%2F49305c22cf635b01bb610c57a89867b6.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1654051564&t=71333c5a5adcbfb07f5e6ff4803a2157"
@@ -86,7 +86,7 @@
           <img class="my-cell-l-icon" src="../../static/my/arrow.png" alt="" />
         </view>
       </view>
-      <view class="my-cell">
+      <view class="my-cell" @click="handleToPage('opinion')">
         <view class="my-cell-l">
           <img
             style="width: 14px; height: 14px"
@@ -139,6 +139,9 @@ export default {
     uni.hideTabBar();
   },
   methods: {
+    handleToPage(url) {
+      uni.navigateTo({ url: '/pages/my/' + url })
+    },
     handleLogin() {
       uni.getUserInfo({
         provider: "weixin",
@@ -153,10 +156,7 @@ export default {
 
 <style lang="scss" scoped>
 .my {
-  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
-  background-size: 269px 115px;
   overflow: hidden;
-  padding-top:var(--status-bar-height);
 }
 .my-cell-wap {
   background: #fff;

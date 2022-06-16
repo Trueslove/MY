@@ -1,7 +1,7 @@
 
 <template>
-  <view class="my-d">
-    <view class="my-d-tit">个人主页</view>
+  <view class="my-d header-bj">
+    <navTab></navTab>
     <view class="my-d-pz">
         <view class="my-d-pz-img">
             <img class="my-d-pz-header" src="../../static/my/header.png" alt=""/>
@@ -55,9 +55,11 @@
 
 <script>
 import tabbar from "../../common/tab/index.vue"
+import navTab from "../../common/navTab/index"
 export default {
   components: {
-    tabbar
+    tabbar,
+    navTab
   },
   onLoad(options) {
     uni.hideTabBar()
@@ -98,11 +100,6 @@ export default {
             }
         }
     }
-}
-.my-d {
-  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
-  background-size: 269px 115px;
-  padding-top:var(--status-bar-height);
 }
 .my-d-pz {
     display: flex;

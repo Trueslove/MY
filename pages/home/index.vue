@@ -1,20 +1,10 @@
 
 <template>
-  <view>
+  <view class="content">
     <tabbar :current="0"></tabbar>
     <!-- 头部 -->
     <view class="home-header">
-      <view class="home-header-tit">
-        <!-- <view class="header-l"> </view> -->
-        <view class="header-c"> MY+ </view>
-        <!-- <view class="header-r">
-          <view class="header-r-i-wap">
-            <span class="header-r-i-num">3</span>
-            <img class="header-r-i" src="../../static/home/info.png" alt="" />
-          </view>
-          <img class="header-r-s" src="../../static/home/setting.png" alt="" />
-        </view> -->
-      </view>
+      <navTab :isShowBack="false"></navTab>
       <img class="home-h-logo" src="../../static/home/logo.png" alt="" />
       <view class="home-h-img">
         <text class="home-hi-txt">你若爱，生活哪里都可爱。</text>
@@ -83,9 +73,11 @@
 
 <script>
 import tabbar from "../../common/tab/index.vue"
+import navTab from "../../common/navTab/index"
 export default {
   components: {
-    tabbar
+    tabbar,
+    navTab
   },
   onLoad(options) {
     uni.hideTabBar()

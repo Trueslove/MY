@@ -52,6 +52,14 @@ export default {
 /* #ifndef APP-PLUS-NVUE */
 @import "./style/main.css";
 @import "./style/common.scss";
+.content {
+  padding-bottom: 100upx;
+}
+.header-bj {
+  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
+  background-size: 269px 115px;
+  padding-top:var(--status-bar-height);
+}
 button {
   /*消除button的默认样式*/
   /*这种写法是对所有的button标签同时生效*/

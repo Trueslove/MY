@@ -1,5 +1,5 @@
 <template>
-  <view class="form">
+  <view class="form header-bj">
     <view class="form-header">
       <view class="form-h-l">取消</view>
       <view class="form-h-tit">记录心情</view>
@@ -231,10 +231,5 @@ export default {
     line-height: 30px;
     text-align: center;
   }
-}
-.form {
-  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
-  background-size: 269px 115px;
-  overflow: hidden;
 }
 </style>

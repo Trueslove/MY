@@ -1,6 +1,6 @@
 
 <template>
-  <view class="info">
+  <view class="info content header-bj">
     <tabbar :current="3"></tabbar>
     <!-- 查询 -->
     <view class="info-search">
@@ -162,10 +162,7 @@ input::-webkit-input-placeholder {
   font-size: 12px;
 }
 .info { 
-  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
-  background-size: 269px 115px;
   overflow: hidden;
-  padding-top:var(--status-bar-height);
 }
 .info-search {
   display: flex;

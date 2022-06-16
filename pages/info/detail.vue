@@ -1,6 +1,6 @@
 
 <template>
-  <view class="i-d">
+  <view class="i-d header-bj">
     <view class="i-d-tit">小逃生</view>
     <view class="i-d-c">
       <view class="i-d-cell" v-for="item in 4" :key="item">
@@ -96,11 +96,6 @@ export default {};
       border-radius: 50%;
     }
   }
-}
-.i-d {
-  background: url("https://s1.ax1x.com/2022/06/09/XyE6T1.png") no-repeat;
-  background-size: 269px 115px;
-  overflow: hidden;
 }
 .i-d-tit {
   font-size: 20px;
